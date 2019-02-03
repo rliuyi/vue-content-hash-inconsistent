@@ -1,5 +1,17 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <button @click="show=true">Load Tooltip</button>
+    <tooltip v-if="show"></tooltip>
   </div>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    show: false
+  }),
+  components: {
+    Tooltip: () => import(/* webpackChunkName: "tooltip" */ "@/components/Tooltip")
+  }
+};
+</script>
