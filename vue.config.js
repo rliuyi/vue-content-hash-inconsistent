@@ -3,8 +3,8 @@ const webpack = require('webpack');
 module.exports = {
     configureWebpack: {
         output: {
-            filename: '[name].[contenthash].js',
-            chunkFilename: '[name].[contenthash].js'
+            filename: 'js/[name].[contenthash].js',
+            chunkFilename: 'js/[name].[contenthash].js'
         },
         plugins: [
             new webpack.HashedModuleIdsPlugin()
